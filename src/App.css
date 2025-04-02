@@ -1,38 +1,385 @@
-.App {
-  text-align: center;
+@import url('https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@400;700;900&display=swap');
+*{
+    padding: 0px;
+    margin: 0px;
+    box-sizing: border-box;
+}
+body{
+    background: linear-gradient(to right, rgb(5, 18, 32), rgb(93, 96, 96));
+    color: white;
+    font-size: 18px;
+    width: 100vw;
+    overflow-x: hidden;
+}
+ul{
+    li{
+        list-style: none;
+        a{
+            text-decoration: none;
+            color: white;
+        }
+    }
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+/* header */
+.headerWrapper{
+    padding: 7px;
+    display: flex;
+    justify-content: space-between;
+    background: linear-gradient(to right, rgb(35, 97, 163), rgb(152, 209, 215));
+
+    div{
+        padding: 10px;
+        border-radius: 50%;
+        background-color: rgba(193, 189, 189, 0.465);
+        cursor: pointer;
+    }
+     
+    ul{
+        display: flex;
+        align-items: center;
+        li{
+            list-style-type: none;
+            margin: 0px 15px;
+            font-weight: 600;
+            transition-duration: 0.3s;
+            cursor: pointer;
+        }
+        li:hover{
+            transform: scale(1.3);
+            text-decoration: underline;
+        }
+    }
+
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+/* HeroSection */
+
+.heroWrapper{
+    width: 100vw;
+    height: 85vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    .heroContent{
+        .title{
+            width: 80vw;
+            font-size: 65px;
+            font-weight: 700;
+            background: linear-gradient(to right,rgb(18, 129, 173), rgb(10, 12, 112), rgb(18, 129, 173));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        .text{
+            font-style: italic;
+            color: rgb(222, 229, 231);
+            font-weight: 600;
+            text-decoration: underline;
+            margin: 10px 0px;
+        }
+        button{
+            padding: 10px 20px;
+            margin: 10px 0px;
+            font-size: 16px;
+            font-weight: 700;
+            border-radius: 8px;
+            background: linear-gradient(to right, rgb(7, 16, 102), blue);
+            border: 2px solid rgb(87, 86, 86);
+            cursor: pointer;
+            transition: all 0.3s;
+            a{color: white;}
+            
+        }
+        button:hover{
+            transform: scale(1.1);
+        }
+
+        .cv{
+            width: max-content;
+            padding: 10px 20px;
+            border-radius: 8px;
+            border: 2px solid rgb(87, 86, 86);
+            cursor: pointer;
+        }
+
+        .HeroChar{
+            font-family: "Cinzel Decorative", serif;
+            font-size: 405px;
+            margin-left: 450px;
+            font-weight: 700;
+            font-style: normal;
+            position: absolute;
+            left: 0px;
+            right: 0px;
+            top: 0px;
+            bottom: 0px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            transition: all 0.3s;
+        }
+    }
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+/* About Me */
+.aboutContent{
+    width: 80vw;
+    padding: 30px;
+    margin: 30px auto;
+    border-radius: 7px;
+    background: rgb(54, 54, 88);
+    .title{
+        margin-bottom: 20px;
+        text-align: center;
+        font-size: 34px;
+        font-weight: 600;
+    }
+    div{
+        display: flex;
+        justify-content: space-around;
+        img,p{
+            width: 40%;
+            border-radius: 5px;
+        }
+    }
 }
 
-.App-link {
-  color: #61dafb;
+/* teckSkill */
+.teckSkill{
+    margin: 60px auto;
+    padding: 20px;
+    border: 1px solid gray;
+    .title{
+        text-align: center;
+        font-size: 24px;
+        font-weight: 600;
+        text-decoration: underline;
+    }
+    div{
+        width: 80vw;
+        margin: auto;
+        ul{
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-evenly;
+            li{
+                margin: 30px;
+                transition: all 0.3s;
+            }
+            li:hover{
+                text-decoration: underline;
+                color: orange;
+                transform: scale(1.3);
+            }
+        }
+    }
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+/* project */
+
+.projectWrapper{
+    .title{
+        text-align: center;
+        font-size: 24px;
+        font-weight: 600;
+    }
+    .cardWrapper{
+        
+        display: flex;
+        flex-wrap:wrap;
+        justify-content: space-evenly;
+        .card{
+            margin: 20px;
+            display: flex;
+            flex-direction: column;
+            img{
+                width: 300px;
+                border-radius: 3px;
+            }
+            .title{
+                font-size: 22px;
+            }
+            p{
+                width: 300px;
+                font-size: 16px;
+            }
+        }
+    }
+}
+
+/* contact */
+
+.contactWrapper{
+    padding-bottom: 20px;
+    background: #465697;
+    .title{
+        text-align: center;
+        font-size: 24px;
+        font-weight: 600;
+        padding-top: 20px;
+    }
+
+    form{
+        width: 50vw;
+        margin: auto;
+        margin-top: 30px;
+        padding: 50px;
+        background: rgb(11, 11, 46);
+        border-radius: 8px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+
+        h1,p{
+            margin-right: auto;
+        }
+        h1{
+            color: orange;
+        }
+        p{
+            font-size: 14px;
+            margin: 20px auto 20px 0px;
+        }
+
+        label{
+            margin-right: auto;
+        }
+        input{
+            width: 100%;
+            margin-bottom: 20px;
+            padding: 15px;
+            border-radius: 8px;
+        }
+        input::placeholder{
+            font-size: 16px;
+        }
+        textarea{
+            width: 100%;
+            padding: 15px;
+            height: 100px;
+            margin-bottom: 20px;
+            border-radius: 8px;
+            font-family: sans-serif;
+        }
+        textarea::placeholder{
+            font-size: 16px;
+        }
+        .btn{
+            width: 100%;
+            font-size: 16px;
+            padding: 10px 15px;
+            margin-top: 15px;
+            border-radius: 8px;
+            font-weight: 600;
+            background: orange;
+            border: 1px solid orange;
+            color: white;
+            transition: all 0.3s;
+        }
+        .btn:hover{
+            background: rgb(11, 11, 46);
+        }
+    }
+}
+.letsConnect1{
+    height: 100px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    background: rgb(11, 11, 46);
+    font-size: 18px;
+    label{
+        font-size: 45px;
+        font-weight: 800;
+    }
+}
+.letsConnect2{
+    width: 100%;
+    padding: 20px;
+    font-size: 20px;
+    background: #010820;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    p{
+        width: 50vw;
+        text-align: center;
+    }
+}
+.letsConnect3{
+    height: 100px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background: rgb(11, 11, 46);
+}
+
+@media screen and (max-width: 480px) {
+    .headerWrapper{
+        font-size: 14px;
+        ul{
+            li{
+                margin: 0px 10px;
+            }
+        }
+    }
+
+    .projectWrapper .cardWrapper .card{
+        img,p{
+            width: 250px;
+            margin: auto;
+        }
+    }
+
+}
+
+@media screen and (max-width: 790px) {
+    .heroWrapper .heroContent .HeroChar{
+        display: none;
+    }
+
+    .aboutContent div{
+        flex-direction: column;
+        align-items: center;
+         img{
+            width: 180px;
+        height: 220px;
+        margin-bottom: 20px;
+        }
+        p{
+            width: 90%;
+            font-size: 16px;
+        }
+    }
+
+    .teckSkill div ul li{
+        margin: 15px;
+        font-size: 16px;
+    }
+
+    .contactWrapper {
+        form{
+            width: 90vw;
+        }
+    }
+    .letsConnect1{
+        flex-direction: column;
+        label{
+            font-size: 25px;
+        }
+        ul li{
+            font-size: 16px;
+        }
+    }
+    .letsConnect2{
+        p{
+            font-size: 16px;
+        }
+    }
+    .letsConnect3{
+        font-size: 16px;
+    }
 }
